@@ -109,9 +109,7 @@ namespace EntityDataModelDemo
         private void btnShowAll_Click(object sender, EventArgs e)
         {
 
-            IEnumerable<Emp> result = from emp in dbcontext.Emps select emp;
-            
-            dataGridView1.DataSource =result ;
+            dataGridView1.DataSource =dbcontext.Emps.ToList() ;
         }
     }
 }
